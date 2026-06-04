@@ -1,0 +1,36 @@
+.product {
+  display : grid;
+   display : flex;
+   flex-wrap : wrap;
+  gap : 20px;
+  justify-content:center;
+
+}
+
+.card{
+  
+  border : 1px solid red;
+  padding : 20px;
+  border-radius: 15px;
+  width : 200px;
+  height:250px
+}
+
+.pagination{
+  display : flex;
+  justify-content:center;
+  margin-top:20px;
+  gap:10px;
+  
+}
+
+
+.pagination-selected{
+  background-color: white;
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  dispay :flex;
+  justify-content:center;
+  align-items:center;
+}
