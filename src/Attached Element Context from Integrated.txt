@@ -1,0 +1,50 @@
+Attached Element Context from Integrated Browser
+
+Element: div.product
+
+URL: http://localhost:5173/
+
+HTML Path: div#root > div > div > div.product
+
+Outer HTML:
+```html
+<div class="product"> <div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"><h3>Essence Mascara Lash Princess</h3><p> ₹ 9.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"><h3>Eyeshadow Palette with Mirror</h3><p> ₹ 19.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"><h3>Powder Canister</h3><p> ₹ 14.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"><h3>Red Lipstick</h3><p> ₹ 12.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp"><h3>Red Nail Polish</h3><p> ₹ 8.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp"><h3>Calvin Klein CK One</h3><p> ₹ 49.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp"><h3>Chanel Coco Noir Eau De</h3><p> ₹ 129.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp"><h3>Dior J'adore</h3><p> ₹ 89.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/1.webp"><h3>Dolce Shine Eau de</h3><p> ₹ 69.99</p></div></div><div><div class="card"><img alt="image" width="150px" src="https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/1.webp"><h3>Gucci Bloom Eau de</h3><p> ₹ 79.99</p></div></div></div>
+```
+
+Dimensions:
+- top: -831px
+- left: 1px
+- width: 961px
+- height: 1224px
+
+CSS:
+```css
+.product { display : grid;
+   display : flex;
+   flex-wrap : wrap;
+  gap : 20px;
+  justify-content:center; }
+
+/* Inherited */
+#root { text-align: center }
+:root { font: 18px/145% var(--sans); letter-spacing: 0.18px; color: var(--text) }
+ { font-size: 16px }
+
+/* Resolved values */
+color: rgb(107, 99, 117);
+column-gap: 20px;
+display: flex;
+flex-wrap: wrap;
+font-size: 16px;
+height: 1224.27px;
+justify-content: center;
+letter-spacing: 0.18px;
+row-gap: 20px;
+text-align: center;
+unicode-bidi: isolate /*UA*/;
+width: 960.533px;
+
+/* CSS variables */
+--sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+--text: #6b6375;
+```

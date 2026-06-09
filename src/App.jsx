@@ -4,6 +4,8 @@ const App = () => {
     
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
+  const [toggle, setToggle] = useState(false);
+
   const fetchProducts = async () => {
     try {
       const res = await fetch('https://dummyjson.com/products');
@@ -27,8 +29,12 @@ const App = () => {
     setPage(page);
   }
   return (
-    <div>
-      <h1>Welcome to PageN</h1>
+    <div className={toggle  ? "app dark":"app"}>
+      <p className={toggle ? "toggle-btn" : "toggle-btn"} onClick={()=>setToggle(!toggle)}></p>
+      <div>
+        <h1>Welcome to PageN  </h1>
+       
+      </div>
          
          <div>
           {products.length > 0 && (

@@ -1,3 +1,13 @@
+.app{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  justify-content:center;
+  margin:50px;
+  gap:20px;
+
+}
+
 .product {
   display : grid;
    display : flex;
@@ -26,11 +36,23 @@
 
 
 .pagination-selected{
-  background-color: white;
+  background-color: rgb(167, 86, 86);
+  color:black;
   width:20px;
   height:20px;
   border-radius:50%;
   dispay :flex;
   justify-content:center;
   align-items:center;
+}
+
+
+.toggle-btn{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  border: 2px solid rgb(226, 21, 21); margin-left:20px;
+  background-color:yellow;
+  
+  cursor:pointer;
 }
