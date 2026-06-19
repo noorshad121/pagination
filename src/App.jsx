@@ -49,7 +49,7 @@ const App = () => {
                 <div className="card">
                   <img src={prod.images[0]} alt={prod.title} width="150px" />
                   <h3>{prod.title}</h3>
-                  <p> &#8377; {prod.price}</p>
+                  <p> $ {prod.price}</p>
                 </div>
               </div>
             ))} 
