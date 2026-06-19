@@ -1,58 +1,199 @@
-.app{
-  display:flex;
-  align-items:center;
-  flex-direction:column;
-  justify-content:center;
-  margin:50px;
-  gap:20px;
-
+/* ==========================================================================
+   1. Base & Global Styles
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Base Light Mode Setup */
+.app {
+  background-color: #f8f9fa;
+  color: #212529;
+  min-height: 100vh;
+  padding: 40px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth Dark Mode Transition */
+.app.dark {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* ==========================================================================
+   2. Header & Toggle Button
+   ========================================================================== */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.app.dark .header-section {
+  border-bottom-color: #2d2d2d;
+}
+
+.header-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Stylish Toggle Button */
+.toggle-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.35);
+}
+
+/* Dark Mode Button Dynamic Styling */
+.app.dark .toggle-btn {
+  background-color: #ffc107;
+  color: #000000;
+  box-shadow: 0 4px 6px rgba(255, 193, 7, 0.25);
+}
+
+.app.dark .toggle-btn:hover {
+  background-color: #e0a800;
+  box-shadow: 0 6px 12px rgba(255, 193, 7, 0.35);
+}
+
+/* ==========================================================================
+   3. Product Grid & Cards
+   ========================================================================== */
 .product {
-  display : grid;
-   display : flex;
-   flex-wrap : wrap;
-  gap : 20px;
-  justify-content:center;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card{
-  
-  border : 1px solid red;
-  padding : 20px;
-  border-radius: 15px;
-  width : 200px;
-  height:250px
+/* Glassmorphism/Modern Card Style */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pagination{
-  display : flex;
-  justify-content:center;
-  margin-top:20px;
-  gap:10px;
-  
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
-
-.pagination-selected{
-  background-color: rgb(167, 86, 86);
-  color:black;
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  dispay :flex;
-  justify-content:center;
-  align-items:center;
+/* Dark Mode Card */
+.app.dark .card {
+  background: #1e1e1e;
+  border-color: #2d2d2d;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Image Wrapper and Sizing */
+.card img {
+  object-fit: contain;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
 
-.toggle-btn{
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  border: 2px solid rgb(226, 21, 21); margin-left:20px;
-  background-color:yellow;
-  
-  cursor:pointer;
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #28a745; /* Indian Rupee Green color */
+}
+
+.app.dark .card p {
+  color: #2ecc71;
+}
+
+/* ==========================================================================
+   4. Pagination Setup
+   ========================================================================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+  user-select: none;
+}
+
+.pagination span {
+  padding: 10px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.pagination span:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+/* Selected Page Button Styling */
+.pagination span.pagination-selected {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+/* Dark Mode Pagination */
+.app.dark .pagination span {
+  background-color: #1e1e1e;
+  border-color: #333333;
+  color: #ffffff;
+}
+
+.app.dark .pagination span:hover {
+  background-color: #2d2d2d;
+}
+
+.app.dark .pagination span.pagination-selected {
+  background-color: #ffc107;
+  color: #000000;
+  border-color: #ffc107;
 }
